@@ -14,7 +14,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style/global.css">
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="js/respond.min.js"></script>
 <![endif]-->
@@ -27,6 +27,7 @@
   <nav class="navbar" role="navigation">
       <div class="top-menu">
         <div class="header">
+         
           <div class="logo">
               <a href="home_fr.html"><img src="images/logos/logo-1.png" alt=""></a>
           </div>
@@ -42,6 +43,11 @@
               
             </div>
             <div class="change-lang"><a href="home_ar.html"><strong>العربية</strong></a ></div>
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
       </div>
    
@@ -63,37 +69,37 @@
       </div>
     </section>
 
-    <section id="about" class="about-section">
+    <section data-aos="fade-up" id="about" class="about-section">
       <div class="section-content">
-        <div class="stacked-div">
+        <div data-aos="fade-up" class="stacked-div">
           <h2>À propos du Dr. Mohamed Cheikh</h2>
           <p>Mohamed Ould Cheikh, homme politique et écrivain mauritanien, est né en 1974. Il a obtenu un doctorat en sciences de la communication et une maîtrise en journalisme. Il a travaillé pour des journaux qataris et édité des magazines spécialisés, avant de rejoindre l'université du Qatar où il travaille actuellement. Militant politique depuis les années 90, il a décidé de se présenter aux élections présidentielles de 2024, s'appuyant sur de larges appels et un programme ambitieux pour améliorer le paysage politique de son pays.</p>
         </div>
-        <div class="stacked-div">
+        <div  data-aos="fade-up" class="stacked-div">
           <h2>Notre vision</h2>
           <p>À travers notre vision globale pour le développement national, nous aspirons à changer la réalité de notre pays, en cherchant à améliorer de manière significative et efficace la situation actuelle. Notre programme intégré vise à réaliser le développement dans tous les aspects de la vie nationale, en mettant l'accent sur l'amélioration de la qualité de vie des citoyens.</p>
         </div>
-        <div class="stacked-div">
+        <div  class="stacked-div">
           <div id="main-page-links" class="main-page-links">
             
-              <div class="main-page-link">
-                <a href="about.html" class="link-to-page"  style="background-image: url(images/Frame\ 2.png);">
+              <div data-aos="zoom-in-up" class="main-page-link">
+                <a href="about.html" class="link-to-page"  style="background-image: url(images/Frame\ 5.png);">
                   <div class="desc">
                     <h3>Son parcours</h3>
                     <span>Lire la suite</span>
                   </div>
                 </a>
               </div>
-              <div class="main-page-link">
-                <a href="program.html" class="link-to-page"  style="background-image: url(images/Frame\ 3.png);">
+              <div data-aos="zoom-in-up" class="main-page-link">
+                <a href="program.html" class="link-to-page"  style="background-image: url(images/Frame\ 7.png);">
                   <div class="desc">
                     <h3>Programme de candidature</h3>
                     <span>Lire la suite</span>
                   </div>
                 </a>
               </div>
-              <div class="main-page-link">
-                <a href="news.html" class="link-to-page"  style="background-image: url(images/Frame\ 1.png);">
+              <div data-aos="zoom-in-up" class="main-page-link">
+                <a href="news.html" class="link-to-page"  style="background-image: url(images/Frame\ 6.png);">
                   <div class="desc">
                     <h3>Dernières actualités</h3>
                     <span>Lire la suite</span>
@@ -163,24 +169,11 @@
 </div>
 
 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-function switchLanguage(language) {
-    // Get the current page URL
-    var url = window.location.href;
-    
-    // Check if the URL already contains a language parameter
-    var langParamIndex = url.indexOf('?lang=');
-    
-    if (langParamIndex !== -1) {
-        // Remove the existing language parameter
-        url = url.slice(0, langParamIndex);
-    }
-    
-    // Append the new language parameter
-    window.location.href = url + '?lang=' + language;
-}
+  AOS.init();
 </script>
+<script src="scripts/script.js"></script>
 
 </body>
 </html>

@@ -44,7 +44,7 @@ a:hover {
     color: #265075;
 }
 #page{
-    padding:10px 35px 0 35px;
+    padding:10px 70px 0 70px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -147,6 +147,26 @@ a:hover {
     border-bottom: solid 3px #2b5c88;
     
 }
+/* Your CSS styles */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+    
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #967416;
+    border-radius: 5px;
+}
+
+
+
 
 
 /* Hero Section */
@@ -230,6 +250,8 @@ a:hover {
 
 .stacked-div {
     margin-bottom: 40px;
+    text-align: center;
+   
 }
 
 .stacked-div h2 {
@@ -237,6 +259,7 @@ a:hover {
     font-weight: bold;
     color: #376e9e;
     margin-bottom: 20px;
+
 }
 
 .stacked-div p {
@@ -244,6 +267,8 @@ a:hover {
     line-height: 1.8;
     color: #252525;
     font-weight: 500;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 30px;
 }
 
 /* Work Section */
@@ -270,6 +295,7 @@ a:hover {
     right: 0;
     width: 100%;
     padding: 20px;
+    text-align: center;
 }
 
 .link-to-page .desc h3 {
@@ -306,7 +332,7 @@ a:hover {
     padding: 50px 50px ;
     
 }
-/* Contact section styling */
+/* Contact section styling ==================================================================================*/
 .contact-us-container {
     padding: 50px 0;
     background-color: #f9f9f9;
@@ -434,7 +460,102 @@ a:hover {
     text-align: justify;
   
   }
+/* news styling here ======================================================================== */
+#news-image{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+  #news-image img{
+    width: 100%;
+   
+  }
+  
+  
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 10px;
+    
+  }
+  #news-container{
+    display: flex;
+    flex-direction: column;
+    
+  
+  }
+  
+  
+  .news-card {
+    /* width: 68.9375rem;
+    height: 10.8125rem; */
+    padding: 10px;
+    margin: 10px;
+   
+    border-radius: 0.625rem;
+    border: 1px solid #E1E1E1;
+    background: #FAFAFA;
+    box-shadow: -1px 15px 30.2px -8px rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    position: relative;
+    
+  
+  }
+  
+  .news-card img {
+  
+    padding: auto; /* Allow the height to adjust based on the image's aspect ratio */
+    min-width: 350px; /* Set a fixed width */
+    max-height: 250px;
+    
+    object-fit: cover; /* Ensure the image covers the entire space while maintaining aspect ratio */
+    border-radius: 5px;
+  }
+  
+  #load-more{
+    border: none;
+    background: #4082BE;
+    color: #E1E1E1;
+  
+  }
+  .card-content {
+    align-self: flex-start;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  
+  }
+  
+  .card-content a {
+    font-size: large;
+    font-weight: 400;
+    color: #ffffff;   
+    background-color: #4082BE; 
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: .4s;
+  }
+  .card-content h3 {
+    font-size: 20pt;
+   
 
+    border-radius: 5px;
+  
+
+  }
+  .card-content a:hover {
+    
+    background-color: #2d557a; 
+  }
 /* Footer Styles ---------------------------------------------------------- */
 #campaign-footer {
     width: 100%;
@@ -452,6 +573,7 @@ a:hover {
     margin-bottom: 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 40px;
 }
 .footer-section {
@@ -505,8 +627,41 @@ a:hover {
     width: 25px;
     height: auto;
 }
+.main-page-link {
+    position: relative;
+    overflow: hidden;
+}
 
-@media (max-width: 767px) {
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #DFA74A;
+    color: black;
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.6s ease-out;
+}
+
+.main-page-link:hover .desc {
+    transform: translateY(0);
+}
+
+
+@media (max-width: 967px) {
+
+    #page{
+        padding: 0;
+    }
     .main-page-link {
         flex-basis: calc(100% - 10px); /* One card per row with 10px gap on mobile */
     }
@@ -517,8 +672,116 @@ a:hover {
         flex-direction: column;
         gap: 40px;
     }
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .hamburger.active .bar {
+        background-color: #c19725;
+    }
+    .menu {
+        padding-top: 200px;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        gap: 70px;
+        flex-direction: column;
+        background-color: #1a3f60;
+        width: 100%;
+        text-align: center;
+        transition: 0.7s ease-in-out ;
+        z-index: 2;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+    .menu ul {
+       display: flex;
+       flex-direction: column;
+       
+    }
+    
+    .menu ul li a {
+        color: #ededed;
+    
+        font-weight: 300;
+        position: relative; /* Set position to relative for the pseudo-element */
+    }
+    .menu ul li a:hover::after {
+        background-color:transparent; /* Change background color on hover */
+    }
+    .menu ul .active {
+        padding-bottom: 0;
+        border-bottom: none;
+        opacity: 1;
+        
+    }
+    .menu ul li.active a {
+        font-weight: bold;
+        opacity: 1;
+    }
+    .menu ul li a {
+        padding-bottom: 0;
+        border-bottom: none;
+        opacity: 0.6;
+        
+    }
+    .menu ul li a:hover {
+        padding-bottom: 0;
+        border-bottom: none;
+        opacity: 1;
+        
+    }
     .about p{
         font-size: 11pt;
+    
+      }
+      .news-card {
+        flex-direction: column;
+      
+      }
+      .news-card img {
+        flex-shrink: 0;
+        padding: 10px;
+        width: 100%; /* Set a fixed width */
+        max-height: 400px; /* Allow the height to adjust based on the image's aspect ratio */
+        margin-right: 10px;
+        
+        object-fit: cover; /* Ensure the image covers the entire space while maintaining aspect ratio */
+        border-radius: 5px;
+      }
+    
+      .card-content a {
+        font-size: large;
+        color: #ffffff;   
+        background-color: #4082BE; 
+        padding: 8px;
+        border-radius: 5px;
+        
+        text-decoration: none;
+        position:relative;
+        transition: .4s;
+      }
+      .card-content h3 {
+        font-size: 16pt;
+       
+    
+        border-radius: 5px;
+      
     
       }
       h1{
@@ -527,7 +790,7 @@ a:hover {
       h3{
         font-size: 16pt;
         line-height: 25pt;
-        text-align: right;
+    
       }
       p{
         font-size: 10pt;
@@ -545,11 +808,11 @@ a:hover {
       }
       .title h3{
         text-align: center;
-        font-weight: 500;
-         color: #ad843e;
+ 
+       
       }
       .title h1{
         text-align: center;
-        margin-bottom: 0;
+     
       }
 }
