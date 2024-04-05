@@ -1,4 +1,8 @@
 /* General Styles */
+::selection {
+    background-color: #376e9e;
+    color: #ffffff;
+}
 body {
     font-family: 'cairo','Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -316,8 +320,8 @@ a:hover {
     bottom: 0;
     right: 0;
     width: 100%;
-    padding: 20px;
-    text-align: center;
+    padding: 40px 0;
+ 
 }
 
 .link-to-page .desc h3 {
@@ -328,7 +332,8 @@ a:hover {
 
 .link-to-page .desc span {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
 }
 .main-page-links {
     display: flex;
