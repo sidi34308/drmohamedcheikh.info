@@ -684,13 +684,21 @@ a:hover {
 }
 
 
-@media (max-width: 1153px) {
+@media (max-width: 900px) {
 
     #page{
         padding: 0;
     }
     .main-page-link {
-        flex-basis: calc(100% - 10px); /* One card per row with 10px gap on mobile */
+        flex-basis: calc(100% - 0px); /* One card per row with 10px gap on mobile */
+        height:400px; 
+    }
+    .main-page-links {
+        height:auto; /* One card per row with 10px gap on mobile */
+        margin: 0;
+    }
+    .stacked-div{
+        padding: 0;
     }
     .row {
         margin-bottom: 0px;
@@ -698,7 +706,14 @@ a:hover {
         justify-content: center;
         flex-direction: column;
         gap: 40px;
+        padding: 40px;
     }
+    .about-section {
+   
+   
+        padding: 30px;
+    }
+    
     .hamburger {
         display: block;
     }
@@ -830,6 +845,18 @@ a:hover {
       
     
       }
+      #campaign-footer {
+        width: 100%;
+     
+        background-color: #ffffff;
+        color: #636363;
+        text-align: center;
+        height: auto;
+    
+        border-radius: 8px;
+      
+    
+    }
       h1{
         font-size: 20pt;
       }
@@ -850,7 +877,8 @@ a:hover {
       
       }
       .title{
-        padding: 2px;
+        
+        width: 100%;
       }
       .title h3{
         text-align: center;
@@ -869,6 +897,11 @@ a:hover {
       }
       .hero-buttons.desktop{
         display: block;
+      }
+      .about{
+  
+        padding: 2rem;
+        padding-top: 0;
       }
       
 }
